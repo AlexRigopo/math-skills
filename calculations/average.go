@@ -1,9 +1,8 @@
 package calculations
 
-func Average(numbers []int) float64 {
-
+func Average(numbers []int) int {
 	if len(numbers) == 0 {
-		return 0
+		return 0 // Avoid division by zero
 	}
 
 	sum := 0
@@ -11,5 +10,5 @@ func Average(numbers []int) float64 {
 		sum += numbers[i]
 	}
 
-	return float64(sum) / float64(len(numbers))
+	return sum / len(numbers)
 }

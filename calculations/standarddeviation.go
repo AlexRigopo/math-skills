@@ -22,3 +22,4 @@ func StandardDeviation(numbers []int) int {
 
 	return fsd
 }
+

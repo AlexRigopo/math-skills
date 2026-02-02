@@ -15,3 +15,4 @@ func Variance(numbers []int) int {
 
 	return sum / n
 }
+

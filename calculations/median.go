@@ -4,18 +4,18 @@ import (
 	"sort"
 )
 
-func Median(numbers []int) float64 {
-
+func Median(numbers []int) int {
 	if len(numbers) == 0 {
-		return 0
+		return 0 // Avoid calculating median for an empty slice
 	}
 
-	sort.Ints(numbers)
+	sort.Ints(numbers) // Sort the numbers first
 
 	n := len(numbers)
 	if n%2 != 0 {
-		return float64(numbers[(n-1)/2])
+		return numbers[(n-1)/2] // Return middle element for odd length
 	}
 
-	return (float64(numbers[(n-1)/2]) + float64(numbers[n/2])) / 2
+	// Return the average of the two middle elements for even length
+	return (numbers[(n-1)/2] + numbers[n/2]) / 2
 }

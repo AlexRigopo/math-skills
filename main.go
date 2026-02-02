@@ -1,9 +1,12 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 	"strconv"
+
+	"MATH-SKILLS/calculations"
 )
 
 func main() {
@@ -16,7 +19,7 @@ func main() {
 
 	var numbers []int
 
-	scanner := bufio.NewScanenr(file)
+	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		value, err := strconv.Atoi(scanner.Text())
 		if err != nil {
@@ -34,4 +37,8 @@ func main() {
 	fmt.Println("Numbers read from file:", numbers)
 
 	// Now you can pass `numbers` to any function
+
+	fmt.Println("Average: ", calculations.Average(numbers))
+	fmt.Println("Median: ", calculations.Median(numbers))
+
 }

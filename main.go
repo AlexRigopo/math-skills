@@ -40,9 +40,6 @@ func main() {
 		return
 	}
 
-	// Print the numbers read from the file
-	fmt.Println("Numbers read from file:", numbers)
-
 	// Call functions from the calculations package to calculate statistics
 	fmt.Println("Average:", calculations.Average(numbers))
 	fmt.Println("Median:", calculations.Median(numbers))

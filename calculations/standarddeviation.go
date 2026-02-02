@@ -8,7 +8,6 @@ func StandardDeviation(numbers []int) int {
 	}
 
 	n := len(numbers)
-
 	ave := Average(numbers) // Call average function
 
 	sum := 0
@@ -22,4 +21,3 @@ func StandardDeviation(numbers []int) int {
 
 	return fsd
 }
-

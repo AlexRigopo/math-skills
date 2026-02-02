@@ -49,4 +49,3 @@ func main() {
 	fmt.Println("Variance:", calculations.Variance(numbers))
 	fmt.Println("Standard Deviation:", calculations.StandardDeviation(numbers))
 }
-

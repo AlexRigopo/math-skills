@@ -19,3 +19,4 @@ func Median(numbers []int) int {
 	// Return the average of the two middle elements for even length
 	return (numbers[(n-1)/2] + numbers[n/2]) / 2
 }
+

@@ -10,5 +10,7 @@ func Average(numbers []int) int {
 		sum += numbers[i]
 	}
 
-	return sum / len(numbers)
+	res := int(float64(sum)/float64(len(numbers)) + 0.5)
+
+	return res
 }

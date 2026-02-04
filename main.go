@@ -23,12 +23,14 @@ func main() {
 
 	// Read each line from the file
 	scanner := bufio.NewScanner(file)
+	c := 0
 	for scanner.Scan() {
+		c++
 		// Convert the string value to an integer
 		value, err := strconv.Atoi(scanner.Text())
 		if err != nil {
 			// Error handling for invalid numbers in the file
-			fmt.Println("Invalid number:", scanner.Text())
+			fmt.Println("In line:", c, ", there is the invalid number:", scanner.Text(), ".")
 			return
 		}
 		numbers = append(numbers, value) // Add the number to the slice

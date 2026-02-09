@@ -18,7 +18,7 @@ func Median(numbers []int) int {
 	if n%2 != 0 {
 		res = numbers[(n-1)/2] // Return middle element for odd length
 	} else {
-		res = int(math.Round(float64(numbers[(n-1)/2]) + float64(numbers[n/2])/2.0))
+		res = int(math.Round(float64(numbers[(n-1)/2]+numbers[n/2]) / 2.0))
 	}
 
 	// Return the average of the two middle elements for even length

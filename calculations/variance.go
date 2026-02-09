@@ -13,7 +13,7 @@ func Variance(numbers []int) int {
 		sum += numbers[i]
 	}
 
-	ave := float64(sum) / float64(n) // Call average function
+	ave := float64(sum) / float64(n) // Calculate average in float64
 
 	sum2 := 0.0
 	for i := 0; i < n; i++ {

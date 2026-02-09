@@ -1,6 +1,7 @@
 package calculations
 
 import (
+	"math"
 	"sort"
 )
 
@@ -11,12 +12,15 @@ func Median(numbers []int) int {
 
 	sort.Ints(numbers) // Sort the numbers first
 
+	res := 0
+
 	n := len(numbers)
 	if n%2 != 0 {
-		return numbers[(n-1)/2] // Return middle element for odd length
+		res = numbers[(n-1)/2] // Return middle element for odd length
+	} else {
+		res = int(math.Round(float64(numbers[(n-1)/2]) + float64(numbers[n/2])/2.0))
 	}
 
 	// Return the average of the two middle elements for even length
-	return (numbers[(n-1)/2] + numbers[n/2]) / 2
+	return res
 }
-

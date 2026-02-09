@@ -17,7 +17,7 @@ func StandardDeviation(numbers []int) int {
 
 	// Calculate standard deviation and round the result
 	sd := math.Sqrt(float64(sum) / float64(n))
-	fsd := int(math.Round(sd)) // Round to nearest integer
+	fsd := int(sd + 0.5) // Round to nearest integer
 
 	return fsd
 }
